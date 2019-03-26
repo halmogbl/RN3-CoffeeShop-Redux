@@ -1,3 +1,7 @@
+// Pressing the Login button and the Signup button will take you to CoffeeList
+// so we just add onPress
+// onPress={() => this.props.navigation.navigate("CoffeeList")}
+
 import React, { Component } from "react";
 
 // NativeBase Components
@@ -53,10 +57,21 @@ class Login extends Component {
               </Form>
             </Body>
           </ListItem>
-          <Button full success>
+          <Button
+            full
+            success
+            // navigate will allow us to go back to the login page
+            // replace we cant go back tho this page " this page is loging in this examble"
+            // because we are using replace we dont have to change the headerLeft with a null value
+            onPress={() => this.props.navigation.replace("CoffeeList")}
+          >
             <Text>Login</Text>
           </Button>
-          <Button full warning>
+          <Button
+            full
+            warning
+            onPress={() => this.props.navigation.replace("CoffeeList")}
+          >
             <Text>Register</Text>
           </Button>
         </List>

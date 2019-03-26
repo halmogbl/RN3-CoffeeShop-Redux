@@ -8,8 +8,16 @@ import coffeeshops from "./list";
 
 // Component
 import CoffeeItem from "./CoffeeItem";
+import CartButton from "../CartButton";
 
 class CoffeeList extends Component {
+  // to customise
+  static navigationOptions = {
+    title: "Coffee List",
+
+    // if we want to add something we put in component like headerRight
+    headerRight: <CartButton />
+  };
   render() {
     const { coffeeShops, loading } = this.props.coffeeReducer;
     let shops;
@@ -18,7 +26,13 @@ class CoffeeList extends Component {
       return <Spinner />;
     }
     shops = coffeeShops.map(coffeeShop => (
-      <CoffeeItem coffeeShop={coffeeShop} key={coffeeShop.id} />
+      <CoffeeItem
+        // i need to pass navigation as props so we can use it in the CoffeeItem Component
+        // or just i can use withNavigations instead of passing props
+        navigation={this.props.navigation}
+        coffeeShop={coffeeShop}
+        key={coffeeShop.id}
+      />
     ));
 
     return (
