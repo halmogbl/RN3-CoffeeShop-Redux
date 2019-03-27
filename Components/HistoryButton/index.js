@@ -8,7 +8,7 @@ class CartButton extends Component {
     return (
       <Icon
         // it wont work if we do not have withNavigation
-        onPress={() => this.props.navigation.navigate("Profile")}
+        onPress={() => this.props.navigation.navigate("OrderHistory")}
         name="profile"
         type="AntDesign"
       />

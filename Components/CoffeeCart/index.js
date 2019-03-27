@@ -5,8 +5,16 @@ import { connect } from "react-redux";
 import { Text, List, Button } from "native-base";
 // Component
 import CartItem from "./CartItem";
+import Profile from "../Profile";
+import HistoryButton from "../HistoryButton";
 
 class CoffeeCart extends Component {
+  static navigationOptions = {
+    title: "Coffee Cart",
+
+    // if we want to add something we put in component like headerRight
+    headerRight: <HistoryButton />
+  };
   render() {
     let items = this.props.items;
     let cartItems;

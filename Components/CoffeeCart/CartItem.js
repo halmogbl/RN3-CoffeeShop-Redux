@@ -9,17 +9,17 @@ class CartItem extends Component {
     return (
       <ListItem style={{ borderBottomWidth: 0 }}>
         <Left>
-          <Text style={{ color: "white", marginLeft: 16 }}> {item.drink} </Text>
+          <Text style={{ color: "black", marginLeft: 16 }}> {item.drink} </Text>
           <Text note style={{ marginLeft: 16 }}>
             {item.option}
           </Text>
         </Left>
         <Body>
-          <Text style={{ color: "white" }}>{item.quantity}</Text>
+          <Text style={{ color: "black" }}>{item.quantity}</Text>
         </Body>
         <Right>
           <Button transparent>
-            <Icon name="trash" style={{ color: "white", fontSize: 21 }} />
+            <Icon name="trash" style={{ color: "black", fontSize: 21 }} />
           </Button>
         </Right>
       </ListItem>

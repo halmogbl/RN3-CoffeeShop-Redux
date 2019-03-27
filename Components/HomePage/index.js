@@ -8,19 +8,13 @@ import { Container, Header } from "native-base";
 // Style
 import styles from "./styles";
 
-// Components
-import CoffeeList from "../CoffeeList";
-import CoffeeCart from "../CoffeeCart";
-import CoffeeDetail from "../CoffeeDetail";
-import Login from "../Login";
-
 // Actions
 import { getCoffeeShops } from "../../store/actions/coffeeActions";
 
 // Navigation
-import MyStack from "../../Navigation";
-import OrderHistory from "../OrderHistory";
-import Profile from "../Profile";
+import MyContainer from "../../Navigation";
+// import OrderHistory from "../OrderHistory";
+// import Profile from "../Profile";
 
 class HomePage extends Component {
   componentDidMount() {
@@ -31,7 +25,7 @@ class HomePage extends Component {
       <Container style={styles.transparent}>
         <View style={styles.overlay} />
 
-        <MyStack />
+        <MyContainer />
       </Container>
     );
   }

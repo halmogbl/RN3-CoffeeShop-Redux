@@ -8,21 +8,23 @@ import React, { Component } from "react";
 import { Text, Content } from "native-base";
 
 class Profile extends Component {
+  static navigationOptions = {
+    title: "My Profile",
+    headerRight: null
+  };
   render() {
     return (
-      <Content>
-        <Text
-          style={{
-            color: "white",
-            marginTop: 100,
-            fontSize: 22,
-            textAlign: "center",
-            fontWeight: "bold"
-          }}
-        >
-          Username
-        </Text>
-      </Content>
+      <Text
+        style={{
+          color: "blue",
+          marginTop: 100,
+          fontSize: 22,
+          textAlign: "center",
+          fontWeight: "bold"
+        }}
+      >
+        Username
+      </Text>
     );
   }
 }

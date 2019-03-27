@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-import { Text, ScrollView, FlatList, StyleSheet, View } from "react-native";
-import { List, ListItem, Container, Content, Header } from "native-base";
+import { Text } from "react-native";
+import { ListItem } from "native-base";
 class Orders extends Component {
   render() {
     return (

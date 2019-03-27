@@ -27,7 +27,7 @@ class OrderHistory extends Component {
         <Container>
           <Text
             style={{
-              marginTop: 70,
+              marginTop: 20,
               fontSize: 22,
               textAlign: "center",
               fontWeight: "bold",

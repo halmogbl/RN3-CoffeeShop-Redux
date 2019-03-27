@@ -20,6 +20,10 @@ import {
 } from "native-base";
 
 class Login extends Component {
+  static navigationOptions = {
+    title: "Sign In / Sign Up  ",
+    headerRight: null
+  };
   render() {
     return (
       <Content>
@@ -29,7 +33,7 @@ class Login extends Component {
             <Body>
               <Form>
                 <Body>
-                  <Label style={{ color: "white" }}>Username</Label>
+                  <Label style={{ color: "black" }}>Username</Label>
                 </Body>
                 <Item
                   rounded
@@ -42,7 +46,7 @@ class Login extends Component {
                   <Input autoCorrect={false} autoCapitalize="none" />
                 </Item>
                 <Body>
-                  <Label style={{ color: "white" }}>Password</Label>
+                  <Label style={{ color: "black" }}>Password</Label>
                 </Body>
                 <Item
                   rounded
@@ -63,14 +67,14 @@ class Login extends Component {
             // navigate will allow us to go back to the login page
             // replace we cant go back tho this page " this page is loging in this examble"
             // because we are using replace we dont have to change the headerLeft with a null value
-            onPress={() => this.props.navigation.replace("CoffeeList")}
+            onPress={() => this.props.navigation.replace("Profile")}
           >
             <Text>Login</Text>
           </Button>
           <Button
             full
             warning
-            onPress={() => this.props.navigation.replace("CoffeeList")}
+            onPress={() => this.props.navigation.replace("Profile")}
           >
             <Text>Register</Text>
           </Button>
